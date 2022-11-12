@@ -12,6 +12,8 @@ import Register from './Pages/Register';
 
 
 
+
+
 const Layout = () => {
   return (
     <>

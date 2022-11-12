@@ -17,10 +17,10 @@ function Register() {
       const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-          const res = await axios.post("/auth/register", inputs);
-          console.log(res);
+          const res = await axios.post("http://192.168.29.239:8800/api/auth/register", inputs);
+          console.log(res.data);
         } catch (error) {
-          setError(error.response.data)
+          console.log(error);
         }
       };
   return (
