@@ -4,7 +4,7 @@ import { hashSync , genSaltSync } from 'bcrypt'
 export const register = (req, res) => {
     // Check Existing User
     const q = "SELECT * FROM users WHERE email = ? OR username = ?"
-
+    console.log(req.body.username);
 
     db.query(q, [req.body.email, req.body.username], (err, data) => {
         if (err) return res.json(err)
